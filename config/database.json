@@ -1,0 +1,12 @@
+{
+
+  "localhost": {
+    "user": "merico",
+    "host": "localhost",
+    "database": "cebackend",
+    "password": "merico",
+    "port": 5432,
+    "dialect": "postgres"
+  }
+
+}

@@ -1,9 +1,10 @@
 const a = require('./a')
-const user = require('./models/user')({}, {})
-const userEmail = require('./models/userEmail')({}, {})
-const userNotification = require('./models/userNotification')({}, {})
+const { DataTypes } = require('sequelize');
+const sequelize = require('./originalModels/connection').sequelize()
+const user = require('./originalModels/user')(sequelize, DataTypes)
+const userEmail = require('./originalModels/userEmail')(sequelize, DataTypes)
+const userNotification = require('./originalModels/userNotification')(sequelize, DataTypes)
 
 module.exports = ()=>{
-  console.log('JON >>> a', a)
   return 'b'
 }
